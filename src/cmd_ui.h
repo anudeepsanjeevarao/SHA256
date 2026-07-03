@@ -1,10 +1,3 @@
-/*
- * cmd_ui.h - FTXUI Terminal UI Interface
- * Single Responsibility: Render a terminal dashboard interface using FTXUI.
- *
- * Part of SHA256 CUDA Hasher Phase 2
- */
-
 #pragma once
 
 #include <string>

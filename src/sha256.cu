@@ -31,10 +31,7 @@ typedef struct {
 	SHA_WORD state[8];
 } CUDA_SHA256_CTX;
 
-/****************************** MACROS ******************************/
-#ifndef ROTLEFT
-#define ROTLEFT(a,b) (((a) << (b)) | ((a) >> (32-(b))))
-#endif
+
 
 #define ROTRIGHT(a,b) (((a) >> (b)) | ((a) << (32-(b))))
 

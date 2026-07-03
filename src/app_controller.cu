@@ -221,11 +221,11 @@ void AppController::onRunHashGPU()
 	}
 
 	// 10. Extract sample hashes
-	// Hash #0 = original SHA256 (thread 0 has no nonce appended)
+	// Hash #0 = original SHA256
 	std::vector<std::pair<int, std::string>> sampleHashes;
 	sampleHashes.push_back({ -1, hashToHex(outBuffer, SHA256_DIGEST_SIZE) });
 
-	// Nonce-based samples at evenly-spaced indices (threads 1+)
+	// Samples at evenly-spaced batch indices
 	if (n_batch > 1) {
 		std::vector<int> sampleIndices;
 		if (n_batch <= 5) {
@@ -364,7 +364,7 @@ void AppController::onRunHashCPU()
 	std::vector<std::pair<int, std::string>> sampleHashes;
 	sampleHashes.push_back({ -1, hashToHex(outBuffer, SHA256_DIGEST_SIZE) });
 
-	// Nonce-based samples at evenly-spaced indices (threads 1+)
+	// Samples at evenly-spaced batch indices
 	if (n_batch > 1) {
 		std::vector<int> sampleIndices;
 		if (n_batch <= 5) {

@@ -1,10 +1,3 @@
-/*
- * app_controller.h - Application Controller Interface
- * Single Responsibility: Orchestrate UI, input, GPU kernel execution, and metrics collection
- *
- * Part of SHA256 CUDA Hasher Phase 1
- */
-
 #pragma once
 
 #include "cmd_ui.h"

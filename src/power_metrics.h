@@ -46,7 +46,6 @@ public:
 	// NVML lifecycle
 	bool init();
 	void shutdown();
-	bool isAvailable() const;
 
 	// Power sampling (background thread)
 	void startSampling();
