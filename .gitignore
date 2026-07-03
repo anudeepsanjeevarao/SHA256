@@ -432,6 +432,9 @@ FodyWeavers.xsd
 x64/
 SHA256/
 Release_Package/
-thirdparty/ftxui/build/
+thirdparty/ftxui/build/*
+!thirdparty/ftxui/build/Release/
+!thirdparty/ftxui/build/Release/*.lib
 thirdparty/ftxui/build_mt/
+
 
