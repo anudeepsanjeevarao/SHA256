@@ -63,10 +63,7 @@ void PowerMetrics::shutdown()
 	}
 }
 
-bool PowerMetrics::isAvailable() const
-{
-	return nvmlInitialized;
-}
+
 
 void PowerMetrics::startSampling()
 {

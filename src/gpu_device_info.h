@@ -1,10 +1,3 @@
-/*
- * gpu_device_info.h - GPU Device Discovery Interface
- * Single Responsibility: Query and validate GPU hardware capabilities
- *
- * Part of SHA256 CUDA Hasher Phase 1
- */
-
 #pragma once
 
 #include <string>

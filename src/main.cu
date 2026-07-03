@@ -1,18 +1,3 @@
-/*
- * main.cu - Application Entry Point
- * Single Responsibility: Wire dependencies and launch the application
- *
- * Part of SHA256 CUDA Hasher Phase 1
- *
- * Build Instructions:
- *   nvcc -o sha256_hasher main.cu app_controller.cu gpu_device_info.cu power_metrics.cu
- *        SHA256.cu input_handler.cpp -lnvml -std=c++17
- *
- * Or with Visual Studio:
- *   Add all .cu, .cpp, .h files to the CUDA project
- *   Link against: cudart.lib, nvml.lib
- */
-
 #include "config.h"
 #include "gpu_device_info.h"
 #include "power_metrics.h"
@@ -37,7 +22,6 @@ int main(int argc, char* argv[])
     bool nvmlOk = powerMetrics.init();
     if (!nvmlOk) {
         // NVML not available - power metrics will show 0
-        // This is non-fatal; timing and throughput will still work
     }
 
     // --- Step 3: Create Input Handler ---

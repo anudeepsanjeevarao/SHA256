@@ -32,9 +32,7 @@
     <ClCompile Include="src\cmd_ui.cpp" />
     <ClCompile Include="src\input_handler.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="VALIDATION_PLAN_CPU_SHA256.md" />
-  </ItemGroup>
+
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6923EE64-A659-647C-742D-7DE5B810108F}</ProjectGuid>
     <RootNamespace>SHA256</RootNamespace>

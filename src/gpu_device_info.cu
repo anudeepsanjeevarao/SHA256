@@ -1,10 +1,3 @@
-/*
- * gpu_device_info.cu - GPU Device Discovery Implementation
- * Single Responsibility: Query and validate GPU hardware capabilities
- *
- * Part of SHA256 CUDA Hasher Phase 1
- */
-
 #include "gpu_device_info.h"
 #include <cuda_runtime.h>
 

@@ -1,5 +1,5 @@
 /*
- * sha256_cpu.cpp - CPU Implementation of SHA256 Hashing (Host-Side)
+ * sha256_cpu.cu - CPU Implementation of SHA256 Hashing (Host-Side)
  *
  * Single-threaded reference implementation of SHA-256 batch hashing on CPU.
  * Identical algorithm to GPU version for cross-validation.
@@ -15,10 +15,7 @@
 /****************************** MACROS ******************************/
 #define SHA256_BLOCK_SIZE 32            // SHA256 outputs a 32 byte digest
 
-/****************************** MACROS ******************************/
-#ifndef ROTLEFT
-#define ROTLEFT(a,b) (((a) << (b)) | ((a) >> (32-(b))))
-#endif
+
 
 #define ROTRIGHT(a,b) (((a) >> (b)) | ((a) << (32-(b))))
 
@@ -183,9 +180,8 @@ static void cpu_sha256_final(CPU_SHA256_CTX *ctx, BYTE hash[])
 /*
  * mcm_cpu_sha256_hash_batch - Compute batch of SHA256 hashes on CPU
  *
- * Processes n_batch hashes in sequence:
- * - Index 0: SHA256(input) — original, no nonce appended
- * - Index i>0: SHA256(input || nonce[i]) — nonce is 4-byte big-endian integer
+ * Processes n_batch hashes in sequence.
+ * Each hash in the batch is identical (SHA256(input)).
  *
  * Returns 0 on success, non-zero on error.
  */

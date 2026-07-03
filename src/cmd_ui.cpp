@@ -1,10 +1,3 @@
-/*
- * cmd_ui.cpp - FTXUI Terminal UI Implementation
- * Single Responsibility: Compose reactive terminal layouts, handle events, and draw inputs/results.
- *
- * Part of SHA256 CUDA Hasher Phase 2
- */
-
 #include "cmd_ui.h"
 #include <ftxui/dom/elements.hpp>
 #include <ftxui/dom/table.hpp>
